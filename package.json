@@ -8,13 +8,24 @@
   },
   "author": "zuveriya",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "cros": "^1.0.1",
     "express": "^4.21.2",
     "formidable": "^3.5.2",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.16",
     "pug": "^3.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuveriya-spreadd/backend-tasks.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/zuveriya-spreadd/backend-tasks/issues"
+  },
+  "homepage": "https://github.com/zuveriya-spreadd/backend-tasks#readme",
+  "description": ""
 }
