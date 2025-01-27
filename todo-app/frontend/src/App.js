@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Todo />} />
-          <Route path="/add" element={<AddTodoPage />} />
+          {/* <Route path="/add" element={<AddTodoPage />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
