@@ -1,10 +1,14 @@
 import React from "react";
 import AddTodo from "./AddTodo";
-
+import "./todo.css"
 const TodoList = ({ todoList, editableId, editTask, editStatus, editDeadline, toggleEditable, saveEditTask, deleteTask, handleEditChange }) => {
   return (
+    
     <div className="table-responsive">
+      <AddTodo trigger={<button className="add-btn btn btn-primary ml-1">Add Task</button>}/>
+
       <table className="table table-striped">
+
         <thead>
           <tr>
             <th scope="col">#</th>

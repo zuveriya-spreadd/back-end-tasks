@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
 import axios from "axios";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const API = "http://localhost:1000/v1/todos/";
 
@@ -49,9 +51,11 @@ const AddTodo = () => {
   };
 
   return (
-    <div className="col-md-5 container mt-5">
-      <h2 className="text-center">Add Task</h2>
-      <form className="bg-light p-4">
+    <div className="col-md-5 container mt-2">
+      <Popup trigger={<button className="btn btn-success">Add Task</button>} modal>
+
+      {close=>(
+        <form className="bg-light p-4" onSubmit={(e)=> addTask(e,close)}>
         <div className="mb-3">
           <label>Task</label>
           <input
@@ -81,10 +85,14 @@ const AddTodo = () => {
             onChange={(e) => handleInputChange(e, "newDeadline")}
           />
         </div>
-        <button onClick={addTask} className="btn btn-success bt-sm">
+        <button onClick={addTask} className="btn btn-success">
           Add Task
         </button>
+        <button type="button" className="btn btn-danger" onClick={()=> close()} >Close</button>
+
       </form>
+      )}
+      </Popup>
     </div>
   );
 };
